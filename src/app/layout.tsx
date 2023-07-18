@@ -1,6 +1,7 @@
 import "$styles/globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { Providers } from "./providers";
 
 const roboto = Roboto({ weight: "400", style: "normal", subsets: ["latin"] });
 
@@ -16,7 +17,16 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
-            <body className={roboto.className}>{children}</body>
+            <body className={roboto.className}>
+                {/* <style jsx global>
+                    {`
+                        :root {
+                            --font-roboto: ${roboto.style.fontFamily};
+                        }
+                    `}
+                </style> */}
+                <Providers>{children}</Providers>
+            </body>
         </html>
     );
 }
