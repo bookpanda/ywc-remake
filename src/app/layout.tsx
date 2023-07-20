@@ -2,6 +2,7 @@ import "$styles/globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Providers } from "./providers";
+import { Layout } from "@/modules/Layout";
 
 const roboto = Roboto({ weight: "400", style: "normal", subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                         }
                     `}
                 </style> */}
-                <Providers>{children}</Providers>
+                <Providers>
+                    <Layout>{children}</Layout>
+                </Providers>
             </body>
         </html>
     );
