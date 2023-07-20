@@ -21,7 +21,13 @@ export const MenuDrawer: FC = () => {
     const btnRef = useRef(null);
     return (
         <>
-            <Button ref={btnRef} onClick={onOpen} px={1} hideFrom="md">
+            <Button
+                ref={btnRef}
+                onClick={onOpen}
+                px={1}
+                hideFrom="md"
+                bgColor="transparent"
+            >
                 <HamburgerIcon boxSize={10} />
             </Button>
             <Drawer
@@ -38,13 +44,13 @@ export const MenuDrawer: FC = () => {
 
                     <DrawerBody>
                         <Flex direction={"column"} align={"start"} gap={10}>
-                            <Button color="orange" variant="link">
+                            <Button color="primary.500" variant="link">
                                 Home
                             </Button>
-                            <Button color="orange" variant="link">
+                            <Button color="primary.500" variant="link">
                                 All Products
                             </Button>
-                            <Button color="orange" variant="link">
+                            <Button color="primary.500" variant="link">
                                 About
                             </Button>
                         </Flex>

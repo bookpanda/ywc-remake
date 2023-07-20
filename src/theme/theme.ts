@@ -1,17 +1,28 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 import "@fontsource/inter";
 
-export const theme = extendTheme({
-    colors: {
-        orange: "#FF7009",
-        red: "#E62727",
-        white: "#FFFFFF",
-        black: "#000000",
-        lightgray: "#F5F5F5",
-        gray: "#847D7D",
+export const theme = extendTheme(
+    {
+        colors: {
+            primary: { 500: "#FF7009" },
+            secondary: { 500: "#E62727" },
+        },
+        fonts: {
+            heading: `'Inter', sans-serif`,
+            body: `'Inter', sans-serif`,
+        },
+        styles: {
+            global: {
+                button: {
+                    _hover: {
+                        backgroundColor: "#C95806",
+                    },
+                },
+            },
+        },
     },
-    fonts: {
-        heading: `'Inter', sans-serif`,
-        body: `'Inter', sans-serif`,
-    },
-});
+    withDefaultColorScheme({
+        colorScheme: "primary",
+        components: ["Button", "Badge"],
+    })
+);

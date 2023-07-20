@@ -13,20 +13,20 @@ export const MenuBar: FC = () => {
             gap={gap}
             hideBelow="md"
         >
-            <Button color="orange" variant="link">
+            <Button color="primary.500" variant="link">
                 Home
             </Button>
-            <Button color="orange" variant="link">
+            <Button color="primary.500" variant="link">
                 All Products
             </Button>
-            <Button color="orange" variant="link">
+            <Button color="primary.500" variant="link">
                 About
             </Button>
             <Flex gap={5}>
-                <Button p={0}>
+                <Button p={0} bgColor="transparent">
                     <Image alt="basket" src={basket} />
                 </Button>
-                <Button p={0}>
+                <Button p={0} bgColor="transparent">
                     <Image alt="avatar" src={avatar} />
                 </Button>
             </Flex>

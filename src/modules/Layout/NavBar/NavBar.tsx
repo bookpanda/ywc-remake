@@ -9,13 +9,7 @@ import { MenuBar } from "./MenuBar";
 
 export const NavBar: FC = () => {
     return (
-        <Flex
-            h={[91]}
-            px={"5%"}
-            align="center"
-            borderBottom="3px"
-            borderColor="gray"
-        >
+        <Flex h={[91]} px={"5%"} align="center" shadow={"lg"}>
             <Box>
                 <Image alt="logo" src={logoSm} width={50} />
             </Box>
