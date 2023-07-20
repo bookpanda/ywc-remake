@@ -1,13 +1,12 @@
 "use client";
 
-import { Box } from "@chakra-ui/react";
+import { Home } from "@/modules/Home";
 import { NextPage } from "next";
 
 const HomePage: NextPage = () => {
     return (
         <>
-            ad
-            <Box m={2}>Tomato</Box>{" "}
+            <Home />
         </>
     );
 };

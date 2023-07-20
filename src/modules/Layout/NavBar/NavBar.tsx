@@ -13,7 +13,7 @@ export const NavBar: FC = () => {
             h={[91]}
             px={"5%"}
             align="center"
-            borderBottom="1px"
+            borderBottom="3px"
             borderColor="gray"
         >
             <Box>

@@ -1,10 +1,8 @@
 import "$styles/globals.css";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 import { Providers } from "./providers";
 import { Layout } from "@/modules/Layout";
-
-const roboto = Roboto({ weight: "400", style: "normal", subsets: ["latin"] });
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
     title: "ShareKan",
@@ -15,17 +13,12 @@ interface RootLayoutProps {
     children: React.ReactNode;
 }
 
+const NotoSans = localFont({ src: "../../public/fonts/NotoSansThai.ttf" });
+
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
-            <body className={roboto.className}>
-                {/* <style jsx global>
-                    {`
-                        :root {
-                            --font-roboto: ${roboto.style.fontFamily};
-                        }
-                    `}
-                </style> */}
+            <body className={NotoSans.className}>
                 <Providers>
                     <Layout>{children}</Layout>
                 </Providers>

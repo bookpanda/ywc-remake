@@ -1,4 +1,5 @@
-import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
+import "@fontsource/inter";
 
 export const theme = extendTheme({
     colors: {
@@ -8,5 +9,9 @@ export const theme = extendTheme({
         black: "#000000",
         lightgray: "#F5F5F5",
         gray: "#847D7D",
+    },
+    fonts: {
+        heading: `'Inter', sans-serif`,
+        body: `'Inter', sans-serif`,
     },
 });
