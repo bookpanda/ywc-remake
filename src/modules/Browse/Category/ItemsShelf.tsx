@@ -5,7 +5,7 @@ import { Category } from "@/core/types";
 
 export const ItemsShelf: FC = () => {
     return (
-        <Flex>
+        <Flex direction="column" gap={5} mt={20}>
             <ItemsRow category={Category.Meat} />
             <ItemsRow category={Category.Vegatables} />
             <ItemsRow category={Category.Fruits} />
