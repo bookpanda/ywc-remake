@@ -1,8 +1,7 @@
 import { FC } from "react";
 import { Banner } from "./Banner";
 import { Box, Flex } from "@chakra-ui/react";
-import { WorthShare } from "./Items";
-import { ReadMore } from "./Items/ReadMore";
+import { OrderNow, ReadMore, WorthShare } from "./Items";
 
 export const Home: FC = () => {
     return (
@@ -12,6 +11,7 @@ export const Home: FC = () => {
             </Flex>
             <WorthShare />
             <ReadMore />
+            <OrderNow />
         </Box>
     );
 };

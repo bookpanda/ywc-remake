@@ -4,8 +4,9 @@ import "@fontsource/inter";
 export const theme = extendTheme(
     {
         colors: {
-            primary: { 500: "#FF7009" },
+            primary: { 300: "#fad4b9", 500: "#FF7009" },
             secondary: { 500: "#E62727" },
+            tertiary: { 500: "#F5F5F5", 700: "#847D7D" },
         },
         fonts: {
             heading: `'Inter', sans-serif`,
@@ -13,7 +14,7 @@ export const theme = extendTheme(
         },
         styles: {
             global: {
-                button: {
+                Button: {
                     _hover: {
                         backgroundColor: "#C95806",
                     },
@@ -23,6 +24,6 @@ export const theme = extendTheme(
     },
     withDefaultColorScheme({
         colorScheme: "primary",
-        components: ["Button", "Badge"],
+        components: ["Button", "Badge", "Progress"],
     })
 );
