@@ -23,7 +23,14 @@ export const OrderNow: FC = () => {
                 p={{ base: "10%", lg: "5%" }}
                 direction={{ base: "column", xl: "row" }}
             >
-                <Image alt="orderNow" src={orderNow} height={300} />
+                <Image
+                    alt="orderNow"
+                    src={orderNow}
+                    height={300}
+                    style={{ objectFit: "cover" }}
+                    unoptimized
+                    loading="lazy"
+                />
                 <Spacer />
                 <Flex direction="column">
                     <Text fontSize={textSizes} mt={"2vh"}>
