@@ -1,1 +1,1 @@
-export { default as paprika } from "paprika.webp";
+export { default as paprika } from "./paprika.webp";

@@ -1,1 +1,1 @@
-export { default as corn } from "corn.webp";
+export { default as corn } from "./corn.webp";

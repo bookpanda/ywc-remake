@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { Layout } from "@/modules/Layout";
 import localFont from "next/font/local";
+import { AppProvider } from "@/core/contexts/appProvider";
 
 export const metadata: Metadata = {
     title: "ShareKan",
@@ -40,7 +41,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <meta name="theme-color" content="#ffffff"></meta>
             <body className={NotoSans.className}>
                 <Providers>
-                    <Layout>{children}</Layout>
+                    <AppProvider>
+                        <Layout>{children}</Layout>
+                    </AppProvider>
                 </Providers>
             </body>
         </html>

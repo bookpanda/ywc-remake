@@ -1,1 +1,1 @@
-export { default as carrot } from "carrot.webp";
+export { default as carrot } from "./carrot.webp";

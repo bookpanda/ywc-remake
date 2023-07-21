@@ -1,1 +1,1 @@
-export { default as apple } from "apple.webp";
+export { default as apple } from "./apple.webp";

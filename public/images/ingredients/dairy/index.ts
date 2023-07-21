@@ -1,1 +1,1 @@
-export { default as cheese } from "cheese.webp";
+export { default as cheese } from "./cheese.webp";
