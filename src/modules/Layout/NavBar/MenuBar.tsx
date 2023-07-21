@@ -4,6 +4,7 @@ import { Button, Flex, Icon, Spacer } from "@chakra-ui/react";
 import { FC } from "react";
 import { avatar, basket } from "../../../../public/images";
 import Image from "next/image";
+import Link from "next/link";
 
 export const MenuBar: FC = () => {
     const gap = { base: 5, lg: 10, xl: 12 };
@@ -14,19 +15,19 @@ export const MenuBar: FC = () => {
             hideBelow="md"
         >
             <Button color="primary.500" variant="link">
-                Home
+                <Link href="/">Home</Link>
             </Button>
             <Button color="primary.500" variant="link">
-                All Products
+                <Link href="/browse">All Products</Link>
             </Button>
             <Button color="primary.500" variant="link">
                 About
             </Button>
             <Flex gap={5}>
-                <Button p={0} bgColor="transparent">
+                <Button p={0} variant="link">
                     <Image alt="basket" src={basket} />
                 </Button>
-                <Button p={0} bgColor="transparent">
+                <Button p={0} variant="link">
                     <Image alt="avatar" src={avatar} />
                 </Button>
             </Flex>

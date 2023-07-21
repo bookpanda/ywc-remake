@@ -5,10 +5,8 @@ import { BlurBanner, OrderNow, ReadMore, Sdg, WorthShare } from "./Items";
 
 export const Home: FC = () => {
     return (
-        <Box pb="15vh">
-            <Flex justify="center" mt={{ base: "0", lg: "5vh" }}>
-                <Banner />
-            </Flex>
+        <Box>
+            <Banner />
             <WorthShare />
             <ReadMore />
             <OrderNow />

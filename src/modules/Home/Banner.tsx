@@ -5,14 +5,16 @@ import { FC } from "react";
 
 export const Banner: FC = () => {
     return (
-        <Flex>
-            <Image
-                alt="banner"
-                src={bannerPic}
-                height={500}
-                unoptimized
-                loading="lazy"
-            />
+        <Flex justify="center" mt={{ base: "0", lg: "5vh" }}>
+            <Flex>
+                <Image
+                    alt="banner"
+                    src={bannerPic}
+                    height={500}
+                    unoptimized
+                    loading="lazy"
+                />
+            </Flex>
         </Flex>
     );
 };

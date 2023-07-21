@@ -28,7 +28,7 @@ export const MenuDrawer: FC = () => {
                 hideFrom="md"
                 bgColor="transparent"
             >
-                <HamburgerIcon boxSize={10} />
+                <HamburgerIcon boxSize={10} color="tertiary.700" />
             </Button>
             <Drawer
                 size={"xs"}

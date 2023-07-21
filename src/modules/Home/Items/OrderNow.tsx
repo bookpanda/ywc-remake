@@ -49,7 +49,7 @@ export const OrderNow: FC = () => {
                             ดูรายละเอียด
                         </Button>
                         <Spacer />
-                        <Button variant="solid" w="45%">
+                        <Button w="45%" _hover={{ bgColor: "primary.700" }}>
                             สั่งเลย
                         </Button>
                     </Flex>

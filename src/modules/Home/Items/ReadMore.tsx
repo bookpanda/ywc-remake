@@ -30,7 +30,12 @@ export const ReadMore: FC = () => {
                     แต่มีหลายคนที่ไม่สามารถ <br />
                     เข้าถึงมัน
                 </Text>
-                <Button size="lg" w={52} mt={7}>
+                <Button
+                    size="lg"
+                    w={52}
+                    mt={7}
+                    _hover={{ bgColor: "primary.700" }}
+                >
                     อ่านเพิ่มเติม
                 </Button>
             </Flex>

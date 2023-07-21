@@ -9,7 +9,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
     return (
         <>
             <NavBar />
-            <Container bgColor="pink.100" maxW={"90%"}>
+            <Container bgColor="pink.100" maxW={"90%"} pb="15vh">
                 {children}
             </Container>
             <Footer />
