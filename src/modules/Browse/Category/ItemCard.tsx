@@ -1,7 +1,7 @@
 import { useAppContext } from "@/core/contexts";
 import { Ingredients } from "@/core/contexts/ingredients";
 import { Item } from "@/core/types";
-import { Card, Flex } from "@chakra-ui/react";
+import { Card } from "@chakra-ui/react";
 import Image from "next/image";
 import { FC } from "react";
 
@@ -10,12 +10,13 @@ interface ItemsRowProps {
 }
 
 export const ItemsCard: FC<ItemsRowProps> = ({ item }) => {
+    const { searchText } = useAppContext();
     const ingredient = Ingredients.find((i) => i.id === item.ingredientId);
 
     return (
         ingredient && (
             <Card
-                w={{ base: "25%", lg: "10%" }}
+                w={{ base: "25%", lg: "11%" }}
                 h="100%"
                 overflow="hidden"
                 filter="auto"
@@ -24,6 +25,11 @@ export const ItemsCard: FC<ItemsRowProps> = ({ item }) => {
                     transition: "0.3s",
                     cursor: "pointer",
                 }}
+                display={
+                    ingredient.name.includes(searchText.toLowerCase())
+                        ? "block"
+                        : "none"
+                }
             >
                 <Image
                     alt="ingredient"
