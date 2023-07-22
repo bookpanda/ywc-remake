@@ -1,9 +1,27 @@
-import { cheese } from "$public/images/ingredients/dairy";
-import { apple } from "$public/images/ingredients/fruits";
-import { corn } from "$public/images/ingredients/grains";
-import { beef } from "$public/images/ingredients/meat";
-import { paprika } from "$public/images/ingredients/spices";
-import { carrot } from "$public/images/ingredients/vegetables";
+import { cheese, cream, milk } from "$public/images/ingredients/dairy";
+import {
+    apple,
+    mango,
+    orange,
+    watermelon,
+} from "$public/images/ingredients/fruits";
+import { corn, flour, noodles, rice } from "$public/images/ingredients/grains";
+import {
+    beef,
+    chicken,
+    crab,
+    fish,
+    lamb,
+    pork,
+    shrimp,
+} from "$public/images/ingredients/meat";
+import { paprika, peppercorn, salt } from "$public/images/ingredients/spices";
+import {
+    carrot,
+    morningGlory,
+    potato,
+    tomato,
+} from "$public/images/ingredients/vegetables";
 import { Ingredient } from "../types";
 import { Category } from "../types";
 
@@ -17,16 +35,22 @@ export const Ingredients: Ingredient[] = [
     },
     {
         id: 2,
-        image: beef,
+        image: chicken,
         category: Category.Meat,
         name: "chicken",
         unit: "kg",
     },
-    { id: 3, image: beef, category: Category.Meat, name: "pork", unit: "kg" },
-    { id: 4, image: beef, category: Category.Meat, name: "lamb", unit: "kg" },
-    { id: 5, image: beef, category: Category.Meat, name: "fish", unit: "kg" },
-    { id: 6, image: beef, category: Category.Meat, name: "shrimp", unit: "kg" },
-    { id: 7, image: beef, category: Category.Meat, name: "crab", unit: "kg" },
+    { id: 3, image: pork, category: Category.Meat, name: "pork", unit: "kg" },
+    { id: 4, image: lamb, category: Category.Meat, name: "lamb", unit: "kg" },
+    { id: 5, image: fish, category: Category.Meat, name: "fish", unit: "kg" },
+    {
+        id: 6,
+        image: shrimp,
+        category: Category.Meat,
+        name: "shrimp",
+        unit: "kg",
+    },
+    { id: 7, image: crab, category: Category.Meat, name: "crab", unit: "kg" },
 
     {
         id: 11,
@@ -37,21 +61,21 @@ export const Ingredients: Ingredient[] = [
     },
     {
         id: 12,
-        image: apple,
+        image: orange,
         category: Category.Fruits,
         name: "orange",
         unit: "kg",
     },
     {
         id: 13,
-        image: apple,
+        image: watermelon,
         category: Category.Fruits,
         name: "watermelon",
         unit: "kg",
     },
     {
         id: 14,
-        image: apple,
+        image: mango,
         category: Category.Fruits,
         name: "mango",
         unit: "kg",
@@ -66,21 +90,21 @@ export const Ingredients: Ingredient[] = [
     },
     {
         id: 22,
-        image: carrot,
+        image: potato,
         category: Category.Vegatables,
         name: "potato",
         unit: "kg",
     },
     {
         id: 23,
-        image: carrot,
+        image: tomato,
         category: Category.Vegatables,
         name: "tomato",
         unit: "kg",
     },
     {
         id: 24,
-        image: carrot,
+        image: morningGlory,
         category: Category.Vegatables,
         name: "morning glory",
         unit: "kg",
@@ -88,7 +112,7 @@ export const Ingredients: Ingredient[] = [
 
     {
         id: 31,
-        image: cheese,
+        image: milk,
         category: Category.Dairy,
         name: "milk",
         unit: "kg",
@@ -102,7 +126,7 @@ export const Ingredients: Ingredient[] = [
     },
     {
         id: 33,
-        image: cheese,
+        image: cream,
         category: Category.Dairy,
         name: "cream",
         unit: "kg",
@@ -110,16 +134,16 @@ export const Ingredients: Ingredient[] = [
 
     {
         id: 41,
-        image: corn,
+        image: rice,
         category: Category.Grains,
         name: "rice",
         unit: "kg",
     },
     {
         id: 42,
-        image: corn,
+        image: noodles,
         category: Category.Grains,
-        name: "wheat",
+        name: "noodles",
         unit: "kg",
     },
     {
@@ -131,7 +155,7 @@ export const Ingredients: Ingredient[] = [
     },
     {
         id: 44,
-        image: corn,
+        image: flour,
         category: Category.Grains,
         name: "flour",
         unit: "kg",
@@ -139,14 +163,14 @@ export const Ingredients: Ingredient[] = [
 
     {
         id: 51,
-        image: paprika,
+        image: peppercorn,
         category: Category.Spices,
-        name: "pepper",
+        name: "peppercorn",
         unit: "kg",
     },
     {
         id: 52,
-        image: paprika,
+        image: salt,
         category: Category.Spices,
         name: "salt",
         unit: "kg",
