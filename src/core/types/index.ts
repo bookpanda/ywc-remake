@@ -19,8 +19,10 @@ export enum Category {
 
 export interface Item {
     ingredientId: number;
-    amount: number;
     price: number;
+    currentAmount: number;
+    goal: number;
+    deadline: Date;
 }
 
 export interface Order {

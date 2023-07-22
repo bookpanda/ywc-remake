@@ -18,7 +18,7 @@ export const ItemsRow: FC<ItemsRowProps> = ({ category }) => {
             Ingredients.find((i) => i.id === item.ingredientId)?.category ===
             category
     );
-    if (!isExceedLg) selectedItems = selectedItems.slice(0, 4);
+    if (!isExceedLg) selectedItems = selectedItems.slice(0, 3);
     return (
         <Flex w="100%" direction="column">
             <Flex>
@@ -32,7 +32,7 @@ export const ItemsRow: FC<ItemsRowProps> = ({ category }) => {
                     </Text>
                 </Link>
             </Flex>
-            <Flex w="100%" h="20vh" gap={5} overflow="clip" bgColor="red">
+            <Flex w="100%" h="20vh" gap={5} overflow="clip" mt={2}>
                 {selectedItems.map((item, index) => (
                     <ItemsCard key={index} item={item} />
                 ))}

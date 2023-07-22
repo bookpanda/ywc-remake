@@ -6,7 +6,7 @@ import { useAppContext } from "@/core/contexts";
 import { Ingredients } from "@/core/contexts/ingredients";
 
 export const ItemsShelf: FC = () => {
-    const { searchText, items } = useAppContext();
+    const { searchText } = useAppContext();
     const categories = [
         Category.Meat,
         Category.Vegatables,

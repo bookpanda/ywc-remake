@@ -1,5 +1,3 @@
-"use client";
-
 import { Home } from "@/modules/Home";
 import { NextPage } from "next";
 

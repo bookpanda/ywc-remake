@@ -1,5 +1,3 @@
-"use client";
-
 import { Browse } from "@/modules/Browse";
 import { NextPage } from "next";
 

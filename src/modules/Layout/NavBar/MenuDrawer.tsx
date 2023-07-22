@@ -14,6 +14,7 @@ import {
     Input,
     useDisclosure,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { FC, useRef } from "react";
 
 export const MenuDrawer: FC = () => {
@@ -45,10 +46,10 @@ export const MenuDrawer: FC = () => {
                     <DrawerBody>
                         <Flex direction={"column"} align={"start"} gap={10}>
                             <Button color="primary.500" variant="link">
-                                Home
+                                <Link href="/">Home</Link>
                             </Button>
                             <Button color="primary.500" variant="link">
-                                All Products
+                                <Link href="/browse">All Products</Link>
                             </Button>
                             <Button color="primary.500" variant="link">
                                 About
