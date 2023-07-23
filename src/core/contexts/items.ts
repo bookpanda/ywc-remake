@@ -2,6 +2,7 @@ import { Item } from "../types";
 
 export const initialItems: Item[] = [
     {
+        id: 1,
         ingredientId: 1,
         price: 200,
         currentAmount: Math.floor(Math.random() * 55),
@@ -9,6 +10,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 2,
         ingredientId: 2,
         price: 100,
         currentAmount: Math.floor(Math.random() * 55),
@@ -16,6 +18,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 3,
         ingredientId: 3,
         price: 150,
         currentAmount: Math.floor(Math.random() * 55),
@@ -23,6 +26,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 4,
         ingredientId: 4,
         price: 250,
         currentAmount: Math.floor(Math.random() * 55),
@@ -30,6 +34,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 5,
         ingredientId: 5,
         price: 130,
         currentAmount: Math.floor(Math.random() * 55),
@@ -37,6 +42,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 6,
         ingredientId: 6,
         price: 160,
         currentAmount: Math.floor(Math.random() * 55),
@@ -44,6 +50,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 7,
         ingredientId: 7,
         price: 300,
         currentAmount: Math.floor(Math.random() * 55),
@@ -51,6 +58,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 11,
         ingredientId: 11,
         price: 80,
         currentAmount: Math.floor(Math.random() * 55),
@@ -58,6 +66,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 12,
         ingredientId: 12,
         price: 80,
         currentAmount: Math.floor(Math.random() * 55),
@@ -65,6 +74,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 13,
         ingredientId: 13,
         price: 80,
         currentAmount: Math.floor(Math.random() * 55),
@@ -72,6 +82,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 14,
         ingredientId: 14,
         price: 80,
         currentAmount: Math.floor(Math.random() * 55),
@@ -79,6 +90,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 21,
         ingredientId: 21,
         price: 50,
         currentAmount: Math.floor(Math.random() * 55),
@@ -86,6 +98,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 22,
         ingredientId: 22,
         price: 50,
         currentAmount: Math.floor(Math.random() * 55),
@@ -93,6 +106,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 23,
         ingredientId: 23,
         price: 50,
         currentAmount: Math.floor(Math.random() * 55),
@@ -100,6 +114,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 24,
         ingredientId: 24,
         price: 50,
         currentAmount: Math.floor(Math.random() * 55),
@@ -107,6 +122,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 31,
         ingredientId: 31,
         price: 100,
         currentAmount: Math.floor(Math.random() * 55),
@@ -114,6 +130,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 32,
         ingredientId: 32,
         price: 100,
         currentAmount: Math.floor(Math.random() * 55),
@@ -121,6 +138,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 33,
         ingredientId: 33,
         price: 100,
         currentAmount: Math.floor(Math.random() * 55),
@@ -128,6 +146,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 41,
         ingredientId: 41,
         price: 140,
         currentAmount: Math.floor(Math.random() * 55),
@@ -135,6 +154,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 42,
         ingredientId: 42,
         price: 140,
         currentAmount: Math.floor(Math.random() * 55),
@@ -142,6 +162,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 43,
         ingredientId: 43,
         price: 140,
         currentAmount: Math.floor(Math.random() * 55),
@@ -149,6 +170,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 44,
         ingredientId: 44,
         price: 140,
         currentAmount: Math.floor(Math.random() * 55),
@@ -156,6 +178,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 51,
         ingredientId: 51,
         price: 170,
         currentAmount: Math.floor(Math.random() * 55),
@@ -163,6 +186,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 52,
         ingredientId: 52,
         price: 170,
         currentAmount: Math.floor(Math.random() * 55),
@@ -170,6 +194,7 @@ export const initialItems: Item[] = [
         deadline: new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000),
     },
     {
+        id: 53,
         ingredientId: 53,
         price: 170,
         currentAmount: Math.floor(Math.random() * 55),

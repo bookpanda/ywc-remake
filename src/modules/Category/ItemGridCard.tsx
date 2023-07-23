@@ -2,7 +2,8 @@ import { useAppContext } from "@/core/contexts";
 import { Ingredients } from "@/core/contexts/ingredients";
 import { Item } from "@/core/types";
 import { body2Sizes } from "@/core/utils/fontSizes";
-import { Box, Card, Flex, Progress, Spacer, Text } from "@chakra-ui/react";
+import { Card, Flex, Progress, Spacer, Text } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { FC } from "react";
 
@@ -11,6 +12,7 @@ interface ItemsGridCardProps {
 }
 
 export const ItemsGridCard: FC<ItemsGridCardProps> = ({ item }) => {
+    const { push } = useRouter();
     const { searchText } = useAppContext();
     const ingredient = Ingredients.find((i) => i.id === item.ingredientId);
 
@@ -27,6 +29,7 @@ export const ItemsGridCard: FC<ItemsGridCardProps> = ({ item }) => {
                     transition: "0.3s",
                     cursor: "pointer",
                 }}
+                onClick={() => push(`/item/${item.id}`)}
                 display={
                     ingredient.name.includes(searchText.toLowerCase())
                         ? "flex"

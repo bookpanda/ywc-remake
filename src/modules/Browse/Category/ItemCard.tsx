@@ -3,6 +3,7 @@ import { Ingredients } from "@/core/contexts/ingredients";
 import { Item } from "@/core/types";
 import { Card } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { FC } from "react";
 
 interface ItemsRowProps {
@@ -10,6 +11,7 @@ interface ItemsRowProps {
 }
 
 export const ItemsCard: FC<ItemsRowProps> = ({ item }) => {
+    const { push } = useRouter();
     const { searchText } = useAppContext();
     const ingredient = Ingredients.find((i) => i.id === item.ingredientId);
 
@@ -20,6 +22,7 @@ export const ItemsCard: FC<ItemsRowProps> = ({ item }) => {
                 h="100%"
                 overflow="hidden"
                 filter="auto"
+                onClick={() => push(`/item/${item.id}`)}
                 _hover={{
                     brightness: "80%",
                     transition: "0.3s",

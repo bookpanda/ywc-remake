@@ -18,6 +18,7 @@ export enum Category {
 }
 
 export interface Item {
+    id: number;
     ingredientId: number;
     price: number;
     currentAmount: number;
