@@ -1,6 +1,6 @@
 "use client";
 
-import { Category } from "@/modules/Category";
+import { Item } from "@/modules/Item";
 import { NextPage } from "next";
 
 interface CategoryPageProps {
@@ -12,7 +12,7 @@ interface CategoryPageProps {
 const ItemPage: NextPage<CategoryPageProps> = ({ params }) => {
     return (
         <>
-            <Category category={params.itemId} />
+            <Item itemId={params.itemId} />
         </>
     );
 };

@@ -56,6 +56,7 @@ export const ItemsGridCard: FC<ItemsGridCardProps> = ({ item }) => {
                 </Text>
                 <Progress
                     value={(item.currentAmount / item.goal) * 100}
+                    borderRadius="xl"
                     bgColor="tertiary.700"
                 />
                 <Flex>

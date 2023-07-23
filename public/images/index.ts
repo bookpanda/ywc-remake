@@ -1,5 +1,6 @@
 export { default as logoSm } from "./logoSm.webp";
 export { default as basket } from "./basket.svg";
+export { default as basketWhite } from "./basketWhite.svg";
 export { default as avatar } from "./avatar.svg";
 export { default as bannerPic } from "./bannerPic.webp";
 export { default as readMore } from "./readMore.webp";
@@ -9,5 +10,10 @@ export { default as SdgGoals } from "./SdgGoals.webp";
 export { default as Sdg8 } from "./Sdg8.webp";
 export { default as logoWhite } from "./logoWhite.webp";
 export { default as line } from "./line.svg";
+export { default as lineOri } from "./lineOri.png";
+export { default as twitter } from "./twitter.svg";
 export { default as facebook } from "./facebook.svg";
+export { default as facebookOri } from "./facebookOri.png";
 export { default as youtube } from "./youtube.svg";
+export { default as link } from "./link.svg";
+export { default as people } from "./people.svg";
