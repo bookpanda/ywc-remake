@@ -19,7 +19,7 @@ export const ItemDisplay: FC<ItemDisplayProps> = ({ itemId }) => {
         ingredient && (
             <Flex
                 mt={{ base: "2vh", md: "5vh" }}
-                h={{ base: "85vh", lg: "80vh", xl: "70vh" }}
+                h={{ base: "95vh", lg: "80vh", xl: "70vh" }}
                 px={{ base: "0%", xl: "10%" }}
                 align="center"
                 justify="center"
@@ -27,7 +27,10 @@ export const ItemDisplay: FC<ItemDisplayProps> = ({ itemId }) => {
                 bg="lightblue"
                 gap={"5%"}
             >
-                <DisplayImage image={ingredient.image} />
+                <DisplayImage
+                    image={ingredient.image}
+                    deadline={item.deadline}
+                />
                 <ItemInfo item={item} ingredient={ingredient} />
             </Flex>
         )

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Divider } from "@chakra-ui/react";
 import { GoBack } from "./GoBack";
 import { ItemDisplay } from "./ItemDisplay";
 
@@ -12,6 +12,7 @@ export const Item: FC<ItemProps> = ({ itemId }) => {
         <Box>
             <GoBack />
             <ItemDisplay itemId={itemId} />
+            <Divider />
         </Box>
     );
 };
