@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { Flex, Text } from "@chakra-ui/react";
-import { body2Sizes, subHeaderSizes, textSizes } from "@/core/utils/fontSizes";
+import { Flex } from "@chakra-ui/react";
 import { useAppContext } from "@/core/contexts";
 import { Ingredients } from "@/core/contexts/ingredients";
 import { DisplayImage } from "./DisplayImage";
@@ -19,7 +18,7 @@ export const ItemDisplay: FC<ItemDisplayProps> = ({ itemId }) => {
         ingredient && (
             <Flex
                 mt={{ base: "2vh", md: "5vh" }}
-                h={{ base: "95vh", lg: "80vh", xl: "70vh" }}
+                h={{ base: "105vh", md: "90vh", lg: "70vh", xl: "60vh" }}
                 px={{ base: "0%", xl: "10%" }}
                 align="center"
                 justify="center"

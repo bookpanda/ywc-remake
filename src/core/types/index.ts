@@ -27,7 +27,8 @@ export interface Item {
 }
 
 export interface Order {
-    ingredientId: number;
+    id: number;
+    itemId: number;
     amount: number;
     price: number;
 }

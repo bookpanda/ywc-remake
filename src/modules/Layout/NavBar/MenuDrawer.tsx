@@ -52,6 +52,9 @@ export const MenuDrawer: FC = () => {
                                 <Link href="/browse">All Products</Link>
                             </Button>
                             <Button color="primary.500" variant="link">
+                                <Link href="/checkout">My Cart</Link>
+                            </Button>
+                            <Button color="primary.500" variant="link">
                                 About
                             </Button>
                         </Flex>

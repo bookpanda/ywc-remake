@@ -13,7 +13,7 @@ export const Item: FC<ItemProps> = ({ itemId }) => {
         <Box>
             <GoBack />
             <ItemDisplay itemId={itemId} />
-            <Divider mt="2vh" />
+            <Divider mt="4vh" />
             <RelatedItems itemId={itemId} />
         </Box>
     );

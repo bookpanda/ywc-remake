@@ -15,35 +15,43 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
         setItems(() => initialItems);
     }, []);
 
-    const orderItems = (
-        shopId: number,
-        ingredientId: number,
-        amount: number
-    ) => {
-        const item = items.find((item) => item.ingredientId === ingredientId);
-        if (item) {
-            const finalAmount = Math.max(0, item.amount - amount);
-            setItems((prev) => {
-                const finalItems = [
-                    ...prev.filter(
-                        (item) => item.ingredientId !== ingredientId
-                    ),
-                    {
-                        ...item,
-                        amount: finalAmount,
-                    },
-                ];
-                setOrders((prev) => [
-                    ...prev,
-                    {
-                        price: amount * item.price,
-                        ingredientId: item.ingredientId,
-                        amount,
-                    },
-                ]);
+    const orderItems = (orderId: number) => {
+        const { amount, id, itemId, price } =
+            orders.find((order) => order.id === orderId) || {};
+        if (itemId && amount && price && id) {
+            const item = items.find((item) => item.id === itemId);
+            if (item) {
+                const finalAmount = Math.max(0, item.currentAmount - amount);
+                setItems((prev) => {
+                    const finalItems = [
+                        ...prev.filter((item) => item.id !== itemId),
+                        {
+                            ...item,
+                            amount: finalAmount,
+                        },
+                    ];
+                    setOrders((prev) => [
+                        ...prev.filter((o) => o.id !== orderId),
+                    ]);
 
-                return finalItems;
-            });
+                    return finalItems;
+                });
+            }
+        }
+    };
+
+    const addToCart = (itemId: number, amount: number) => {
+        const item = items.find((item) => item.id === itemId);
+        if (item) {
+            setOrders((prev) => [
+                ...prev,
+                {
+                    id: orders.length + 1,
+                    price: amount * item.price,
+                    itemId: item.id,
+                    amount,
+                },
+            ]);
         }
     };
 
@@ -56,7 +64,7 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
                 searchText,
                 setSearchText,
                 orders,
-                setOrders,
+                addToCart,
             }}
         >
             {children}

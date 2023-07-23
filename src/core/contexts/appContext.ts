@@ -10,7 +10,7 @@ interface IAppContext {
     searchText: string;
     setSearchText: Dispatch<SetStateAction<string>>;
     orders: Order[];
-    setOrders: Dispatch<SetStateAction<Order[]>>;
+    addToCart: (itemId: number, amount: number) => void;
 }
 
 export const AppContext = createContext<IAppContext>({
@@ -20,7 +20,7 @@ export const AppContext = createContext<IAppContext>({
     searchText: "",
     setSearchText: () => {},
     orders: [],
-    setOrders: () => {},
+    addToCart: () => {},
 });
 
 export function useAppContext() {

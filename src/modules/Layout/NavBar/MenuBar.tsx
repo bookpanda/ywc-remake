@@ -25,7 +25,9 @@ export const MenuBar: FC = () => {
             </Button>
             <Flex gap={5}>
                 <Button p={0} variant="link">
-                    <Image alt="basket" src={basket} />
+                    <Link href="/checkout">
+                        <Image alt="basket" src={basket} />
+                    </Link>
                 </Button>
                 <Button p={0} variant="link">
                     <Image alt="avatar" src={avatar} />

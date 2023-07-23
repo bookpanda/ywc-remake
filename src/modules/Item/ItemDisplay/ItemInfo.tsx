@@ -1,19 +1,8 @@
 import { FC } from "react";
-import {
-    Button,
-    Flex,
-    NumberDecrementStepper,
-    NumberIncrementStepper,
-    NumberInput,
-    NumberInputField,
-    NumberInputStepper,
-    Progress,
-    Spacer,
-    Text,
-} from "@chakra-ui/react";
+import { Flex, Progress, Spacer, Text } from "@chakra-ui/react";
 import { body2Sizes, subHeaderSizes, textSizes } from "@/core/utils/fontSizes";
 import { Ingredient, Item } from "@/core/types";
-import { basketWhite, people } from "$public/images";
+import { people } from "$public/images";
 import Image from "next/image";
 import { Social } from "./Social";
 import { BuyItem } from "./BuyItem";
@@ -27,7 +16,7 @@ export const ItemInfo: FC<ItemInfoProps> = ({ item, ingredient }) => {
     return (
         <Flex
             w={{ base: "100%", lg: "50%" }}
-            h="100%"
+            h={{ base: "60%", sm: "70%", lg: "100%" }}
             p="2%"
             direction="column"
             borderRadius="lg"
@@ -78,7 +67,7 @@ export const ItemInfo: FC<ItemInfoProps> = ({ item, ingredient }) => {
                 borderRadius="xl"
                 bgColor="tertiary.600"
             />
-            <BuyItem item={item} />
+            <BuyItem item={item} ingredient={ingredient} />
             <Text mt={5} fontSize={body2Sizes} color="tertiary.900">
                 แชร์ดีลนี้เพื่อราคาที่ดีที่สุด
             </Text>
