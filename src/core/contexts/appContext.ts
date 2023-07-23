@@ -6,7 +6,7 @@ import { Item, Order } from "../types";
 interface IAppContext {
     items: Item[];
     setItems: Dispatch<SetStateAction<Item[]>>;
-    orderItems: (shopId: number, ingredientId: number, amount: number) => void;
+    orderItems: () => void;
     searchText: string;
     setSearchText: Dispatch<SetStateAction<string>>;
     orders: Order[];

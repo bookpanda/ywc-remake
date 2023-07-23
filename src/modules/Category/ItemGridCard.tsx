@@ -22,7 +22,7 @@ export const ItemsGridCard: FC<ItemsGridCardProps> = ({ item }) => {
         ingredient && (
             <Card
                 w={"100%"}
-                h={{ base: "90%", xl: "100%" }}
+                h={{ base: "90%", xl: "97%" }}
                 p={2}
                 overflow="hidden"
                 filter="auto"

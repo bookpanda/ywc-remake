@@ -24,6 +24,7 @@ export const DisplayImage: FC<DisplayImageProps> = ({ image, deadline }) => {
                     minHeight: "90%",
                     maxHeight: "90%",
                     borderRadius: "0.5rem",
+                    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
                 }}
             />
             <Countdown deadline={deadline} />

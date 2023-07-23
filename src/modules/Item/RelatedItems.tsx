@@ -44,6 +44,7 @@ export const RelatedItems: FC<RelatedItemsProps> = ({ itemId }) => {
     let relatedItems = shuffle(allItems).slice(0, 3);
     if (!isExceedLg) relatedItems = relatedItems.slice(0, 2);
     if (!isExceedMd) relatedItems = relatedItems.slice(0, 1);
+
     return (
         <Flex
             mt={{ base: "2vh", md: "5vh" }}

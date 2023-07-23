@@ -62,7 +62,7 @@ export const Ingredients: Ingredient[] = [
         name: "กุ้ง",
         unit: "kg",
     },
-    { id: 7, image: crab, category: Category.Meat, name: "crab", unit: "kg" },
+    { id: 7, image: crab, category: Category.Meat, name: "ปู", unit: "kg" },
 
     {
         id: 11,
