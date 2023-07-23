@@ -35,18 +35,18 @@ export const ItemInfo: FC<ItemInfoProps> = ({ item, ingredient }) => {
                     fontSize={textSizes}
                     fontWeight="bold"
                     textDecoration={
-                        item.currentAmount < item.goal ? "line-through" : "none"
+                        item.currentAmount > item.goal ? "line-through" : "none"
                     }
                 >
-                    {item.price} บาท
+                    {item.price} บาท/{ingredient.unit}
                 </Text>
-                {item.currentAmount < item.goal && (
+                {item.currentAmount > item.goal && (
                     <Text
                         fontSize={subHeaderSizes}
                         fontWeight="bold"
                         color="primary.500"
                     >
-                        {item.price} บาท
+                        {Math.floor(item.price * 0.7)} บาท/{ingredient.unit}
                     </Text>
                 )}
             </Flex>

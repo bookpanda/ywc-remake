@@ -18,7 +18,7 @@ export const ItemsGrid: FC<ItemsGridProps> = ({ category }) => {
             Ingredients.find((i) => i.id === item.ingredientId)?.category ===
             category
     );
-    const repeat = isExceedXl ? 7 : isExceedMd ? 5 : 2;
+    const repeat = isExceedXl ? 7 : isExceedMd ? 4 : 2;
     return (
         <Flex w="100%" direction="column">
             <Text fontSize={textSizes} mt={"2vh"}>

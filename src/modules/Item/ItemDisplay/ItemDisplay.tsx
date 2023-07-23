@@ -24,7 +24,6 @@ export const ItemDisplay: FC<ItemDisplayProps> = ({ itemId }) => {
                 align="center"
                 justify="center"
                 direction={{ base: "column", lg: "row" }}
-                bg="lightblue"
                 gap={"5%"}
             >
                 <DisplayImage

@@ -13,7 +13,9 @@ interface ItemsRowProps {
 export const ItemsCard: FC<ItemsRowProps> = ({ item }) => {
     const { push } = useRouter();
     const { searchText } = useAppContext();
-    const ingredient = Ingredients.find((i) => i.id === item.ingredientId);
+    const ingredient = Ingredients.find(
+        (i) => item && i.id === item.ingredientId
+    );
 
     return (
         ingredient && (
@@ -23,6 +25,7 @@ export const ItemsCard: FC<ItemsRowProps> = ({ item }) => {
                 overflow="hidden"
                 filter="auto"
                 onClick={() => push(`/item/${item.id}`)}
+                boxShadow="lg"
                 _hover={{
                     brightness: "80%",
                     transition: "0.3s",

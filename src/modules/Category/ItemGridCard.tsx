@@ -1,7 +1,7 @@
 import { useAppContext } from "@/core/contexts";
 import { Ingredients } from "@/core/contexts/ingredients";
 import { Item } from "@/core/types";
-import { body2Sizes } from "@/core/utils/fontSizes";
+import { body1Sizes, body2Sizes } from "@/core/utils/fontSizes";
 import { Card, Flex, Progress, Spacer, Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -14,16 +14,19 @@ interface ItemsGridCardProps {
 export const ItemsGridCard: FC<ItemsGridCardProps> = ({ item }) => {
     const { push } = useRouter();
     const { searchText } = useAppContext();
-    const ingredient = Ingredients.find((i) => i.id === item.ingredientId);
+    const ingredient = Ingredients.find(
+        (i) => item && i.id === item.ingredientId
+    );
 
     return (
         ingredient && (
             <Card
                 w={"100%"}
-                h="100%"
+                h={{ base: "90%", xl: "100%" }}
                 p={2}
                 overflow="hidden"
                 filter="auto"
+                boxShadow="lg"
                 _hover={{
                     brightness: "80%",
                     transition: "0.3s",
@@ -51,9 +54,33 @@ export const ItemsGridCard: FC<ItemsGridCardProps> = ({ item }) => {
                     {ingredient.name.charAt(0).toUpperCase() +
                         ingredient.name.slice(1)}
                 </Text>
-                <Text mt={2} fontSize={body2Sizes} fontWeight="bold">
-                    {item.price} ฿/{ingredient.unit}
-                </Text>
+                <Flex align="baseline">
+                    <Text
+                        mt={2}
+                        mr={2}
+                        fontSize={body2Sizes}
+                        fontWeight="bold"
+                        textDecoration={
+                            item.currentAmount > item.goal
+                                ? "line-through"
+                                : "none"
+                        }
+                    >
+                        {item.price}
+                    </Text>
+                    {item.currentAmount > item.goal && (
+                        <Text
+                            fontSize={body1Sizes}
+                            fontWeight="bold"
+                            color="primary.500"
+                        >
+                            {Math.floor(item.price * 0.7)}
+                        </Text>
+                    )}
+                    <Text mt={2} mr={2} fontSize={body2Sizes} fontWeight="bold">
+                        ฿/{ingredient.unit}
+                    </Text>
+                </Flex>
                 <Progress
                     value={(item.currentAmount / item.goal) * 100}
                     borderRadius="xl"
