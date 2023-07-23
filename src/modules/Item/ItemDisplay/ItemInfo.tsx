@@ -1,10 +1,22 @@
 import { FC } from "react";
-import { Button, Flex, Progress, Spacer, Text } from "@chakra-ui/react";
+import {
+    Button,
+    Flex,
+    NumberDecrementStepper,
+    NumberIncrementStepper,
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    Progress,
+    Spacer,
+    Text,
+} from "@chakra-ui/react";
 import { body2Sizes, subHeaderSizes, textSizes } from "@/core/utils/fontSizes";
 import { Ingredient, Item } from "@/core/types";
 import { basketWhite, people } from "$public/images";
 import Image from "next/image";
 import { Social } from "./Social";
+import { BuyItem } from "./BuyItem";
 
 interface ItemInfoProps {
     item: Item;
@@ -66,17 +78,7 @@ export const ItemInfo: FC<ItemInfoProps> = ({ item, ingredient }) => {
                 borderRadius="xl"
                 bgColor="tertiary.600"
             />
-            <Button
-                leftIcon={
-                    <Image alt="basket" src={basketWhite} color="white" />
-                }
-                py={2}
-                mt={10}
-                borderRadius="3xl"
-                w={40}
-            >
-                หยิบใส่ตะกร้า
-            </Button>
+            <BuyItem item={item} />
             <Text mt={5} fontSize={body2Sizes} color="tertiary.900">
                 แชร์ดีลนี้เพื่อราคาที่ดีที่สุด
             </Text>

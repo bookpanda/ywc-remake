@@ -24,11 +24,7 @@ export const ItemsGrid: FC<ItemsGridProps> = ({ category }) => {
             <Text fontSize={textSizes} mt={"2vh"}>
                 {category.charAt(0).toUpperCase() + category.slice(1)}
             </Text>
-            <Grid
-                templateColumns={`repeat(${repeat}, 1fr)`}
-                gap={6}
-                bgColor="lightblue"
-            >
+            <Grid templateColumns={`repeat(${repeat}, 1fr)`} gap={6}>
                 {selectedItems.map((item, index) => (
                     <ItemsGridCard key={index} item={item} />
                 ))}
