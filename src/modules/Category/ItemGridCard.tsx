@@ -91,7 +91,8 @@ export const ItemsGridCard: FC<ItemsGridCardProps> = ({ item }) => {
                         เหลือ{" "}
                         {Math.ceil(
                             Math.abs(
-                                item.deadline.getTime() - new Date().getTime()
+                                new Date(item.deadline).getTime() -
+                                    new Date().getTime()
                             ) /
                                 (1000 * 60 * 60 * 24)
                         )}{" "}

@@ -27,7 +27,7 @@ export const ItemDisplay: FC<ItemDisplayProps> = ({ itemId }) => {
             >
                 <DisplayImage
                     image={ingredient.image}
-                    deadline={item.deadline}
+                    deadline={new Date(item.deadline)}
                 />
                 <ItemInfo item={item} ingredient={ingredient} />
             </Flex>

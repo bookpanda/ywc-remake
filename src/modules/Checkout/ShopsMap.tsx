@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import { FC, useMemo } from "react";
 import "./Map.css";

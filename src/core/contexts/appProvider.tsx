@@ -12,7 +12,20 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
     const [orders, setOrders] = useState<Order[]>([]);
 
     useEffect(() => {
-        setItems(() => initialItems);
+        const ordersCache = localStorage.getItem("orders");
+        if (ordersCache) {
+            setOrders(() => JSON.parse(ordersCache));
+        } else {
+            setOrders(() => []);
+            localStorage.setItem("orders", JSON.stringify([]));
+        }
+        const itemsCache = localStorage.getItem("items");
+        if (itemsCache) {
+            setItems(() => JSON.parse(itemsCache));
+        } else {
+            setItems(() => initialItems);
+            localStorage.setItem("items", JSON.stringify(initialItems));
+        }
     }, []);
 
     const orderItems = () => {
@@ -29,28 +42,8 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
         }
         setItems(() => newItems);
         setOrders(() => []);
-        // const { amount, id, itemId, price } =
-        //     orders.find((order) => order.id === orderId) || {};
-        // if (itemId && amount && price && id) {
-        //     const item = items.find((item) => item.id === itemId);
-        //     if (item) {
-        //         const finalAmount = Math.max(0, item.currentAmount + amount);
-        //         setItems((prev) => {
-        //             const finalItems = [
-        //                 ...prev.filter((item) => item.id !== itemId),
-        //                 {
-        //                     ...item,
-        //                     currentAmount: finalAmount,
-        //                 },
-        //             ];
-        //             setOrders((prev) => [
-        //                 ...prev.filter((o) => o.id !== orderId),
-        //             ]);
-
-        //             return finalItems;
-        //         });
-        //     }
-        // }
+        localStorage.setItem("orders", JSON.stringify([]));
+        localStorage.setItem("items", JSON.stringify(newItems));
     };
 
     const addToCart = (itemId: number, amount: number) => {
@@ -65,6 +58,7 @@ export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
                     amount,
                 },
             ]);
+            localStorage.setItem("orders", JSON.stringify(orders));
         }
     };
 
