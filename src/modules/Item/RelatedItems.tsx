@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { textSizes } from "@/core/utils/fontSizes";
 import { useAppContext } from "@/core/contexts";
@@ -28,22 +28,27 @@ function shuffle(array: Item[]) {
 }
 
 export const RelatedItems: FC<RelatedItemsProps> = ({ itemId }) => {
+    const [relatedItems, setRelatedItems] = useState<Item[]>([]);
     const [isExceedLg] = useMediaQuery("(min-width: 62em)");
     const [isExceedMd] = useMediaQuery("(min-width: 48em)");
     const { items } = useAppContext();
-    const ingredientId =
-        items.find((i) => i.id.toString() === itemId)?.ingredientId ?? 1;
-    const category = Ingredients.find((i) => i.id === ingredientId)?.category;
-    const relatedIngredients = Ingredients.filter(
-        (i) => i.category === category && i.id !== ingredientId
-    );
-    console.log(relatedIngredients);
-    const allItems = relatedIngredients.map(
-        (i) => items.find((item) => item.ingredientId === i.id) ?? items[0]
-    );
-    let relatedItems = shuffle(allItems).slice(0, 3);
-    if (!isExceedLg) relatedItems = relatedItems.slice(0, 2);
-    if (!isExceedMd) relatedItems = relatedItems.slice(0, 1);
+
+    useEffect(() => {
+        const ingredientId =
+            items.find((i) => i.id.toString() === itemId)?.ingredientId ?? 1;
+        const category = Ingredients.find((i) => i.id === ingredientId)
+            ?.category;
+        const relatedIngredients = Ingredients.filter(
+            (i) => i.category === category && i.id !== ingredientId
+        );
+        const allItems = relatedIngredients.map(
+            (i) => items.find((item) => item.ingredientId === i.id) ?? items[0]
+        );
+        let shuffledItems = shuffle(allItems).slice(0, 3);
+        if (!isExceedLg) shuffledItems = shuffledItems.slice(0, 2);
+        if (!isExceedMd) shuffledItems = shuffledItems.slice(0, 1);
+        setRelatedItems(() => shuffledItems);
+    }, [items, itemId, isExceedLg, isExceedMd]);
 
     return (
         <Flex
